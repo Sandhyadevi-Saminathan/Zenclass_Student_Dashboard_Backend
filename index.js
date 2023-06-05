@@ -20,7 +20,7 @@ const options = {
     integer: true
 }
 app.use(cors({
-    origin: "*"
+    origin: "https://brilliant-wisp-660531.netlify.app"
 }))
 app.use(express.json());
 
