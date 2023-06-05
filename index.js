@@ -5,9 +5,11 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const mongoclient = mongodb.MongoClient;
 const URL = process.env.DB
+
 const cors = require("cors")
 const app = express();
 const SECRET = process.env.SECRET;
+
 const nodemailer = require('nodemailer');
 const rn = require('random-number');
 
