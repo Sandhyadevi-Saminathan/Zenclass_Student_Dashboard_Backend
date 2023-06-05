@@ -1,13 +1,13 @@
 const express = require("express");
+const dotenv = require("dotenv").config();
 const mongodb = require("mongodb")
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const mongoclient = mongodb.MongoClient;
-const URL = "mongodb://0.0.0.0:27017"
-const dotenv = require("dotenv").config();
+const URL = process.env.DB
 const cors = require("cors")
 const app = express();
-const SECRET = "1LBTWK";
+const SECRET = process.env.SECRET;
 const nodemailer = require('nodemailer');
 const rn = require('random-number');
 
@@ -715,5 +715,8 @@ app.post("/placement", authorize, async (req, res) => {
     }
 
 })
+
+
+
 
 app.listen(process.env.PORT || 8000)
