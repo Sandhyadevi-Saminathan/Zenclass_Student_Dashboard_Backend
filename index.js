@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const mongoclient = mongodb.MongoClient;
 const URL = process.env.Db
+const password = process.env.password;
 
 const cors = require("cors")
 const app = express();
@@ -552,7 +553,7 @@ app.post('/mail', async function (req, res) {
                 secure: false,
                 auth: {
                     user: 'sandhyadevi0229@gmail.com',
-                    pass: 'guurmubpamqfohmf'
+                    pass: password
                 }
             });
 
